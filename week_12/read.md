@@ -1,0 +1,1 @@
+### when we connect serverless env to database then we don't directly connect we use connectoin pool in between so that many serverless machine can build connection trough connection pool and connection pool connected to db why need of connection pool bcz if we build direct connection from serverless then many connnection broke database
