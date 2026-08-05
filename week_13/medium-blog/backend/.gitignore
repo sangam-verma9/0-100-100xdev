@@ -14,13 +14,13 @@ dist/
 # deps
 node_modules/
 .wrangler
-
+wrangler.jsonc
 # env
 .env
 .env.production
 .dev.vars
 
-# logs
+# log
 logs/
 *.log
 npm-debug.log*
@@ -31,3 +31,5 @@ lerna-debug.log*
 
 # misc
 .DS_Store
+
+/src/generated/prisma
