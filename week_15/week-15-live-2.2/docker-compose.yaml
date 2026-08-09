@@ -1,0 +1,20 @@
+version: '1.0'
+services:
+  mongodb:
+    image: "mongo"
+    container_name: "mongodb"
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+  backend:
+    image: "mongo-app"
+    container_name: "backend-app"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongodb
+    environment:
+      Mongo_URL: "mongodb://mongodb:27017/myapp"
+volumes:
+  mongodb_data:
