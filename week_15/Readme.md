@@ -99,3 +99,9 @@ volumes:
 ```bash
 docker compose up
 ```
+### Bind mount
+This is way to setup a local machine file connect to docker container file sync up
+
+```bash
+docker run -p 3000:3000 -v ./app:/nextapp/app nextapp #examle of a next app
+```
